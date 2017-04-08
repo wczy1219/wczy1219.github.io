@@ -52,7 +52,7 @@
 	opacity:1;
 	filter:alpha(opacity = 1);
 }
-.firstMenu li, .secondMenu li{
+.firstMenu li.menu, .secondMenu li.menu{
 	width:241px;
 	height:40px;
 	margin-bottom:1px;
@@ -82,7 +82,7 @@
 	filter:alpha(opacity = 1);
 }
 .secondMenu .funBar{
-	width:100%;
+	width:246px;
 	height:40px;
 	line-height:40px;
 	border:1px solid blue;
