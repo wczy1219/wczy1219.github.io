@@ -6,8 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script type="text/javascript" src="jquery.js"></script>
 	<style type="text/css">
-		.content{
-			text-align:center;
+		.firstMenu{
+			display:none;
+		}
+		.cssMenu{
+			display:block;
 		}
 	</style>
 </head>
@@ -81,10 +84,26 @@
 			</div>
 		</div>
 		<div class="content">
-			<span>做一个十分粗糙的网站，用来记录自己的成长历程。</span>
-			<span>通过左侧导航栏查看详细内容。</span>
+			<span class="title1">IE6中实现inline-block</span>
+			<span class="title2">1)inline元素直接使用display:inline-block即可。</span>
+			<span class="title2">2)block元素可采用以下两种方法进行实现。</span>
+			<span class="title3">方法一：先用inline-block触发块元素，然后再定义inline让块元素呈递为内联对象。</span>
+			<pre>
+div{
+    display:inline-block;
+}
+div{
+    display:inline;
+}</pre>
+			<span class="title3">方法二：直接让块元素呈递为内联对象，然后触发元素的layout：</span>
+			<pre>
+div{
+    display:inlune-block;
+    _zoom:1;
+    _display:inline;
+}</pre>
 		</div>
-		<div style="clear:both;height:0;"></div>
+		<div style="clear:both;height:0;width:100%;"></div>
 	</div>
 </body>
 <script type="text/javascript">
