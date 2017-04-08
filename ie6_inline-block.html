@@ -12,6 +12,10 @@
 		.cssMenu{
 			display:block;
 		}
+		.secondMenu li.choosed{
+			font-weight:bold;
+			background-color:lightgray;
+		}
 	</style>
 </head>
 <body>
@@ -23,11 +27,11 @@
 		<div class="leftBar">
 			<div class="firstMenu">
 				<ul>
-					<li id="Css">CSS</li>
-					<li id="Js">JS</li>
-					<li id="Chrome">Chrome</li>
-					<li id="Linux">Linux</li>
-					<li id="Git">Git</li>
+					<li id="Css" class="menu">CSS</li>
+					<li id="Js" class="menu">JS</li>
+					<li id="Chrome" class="menu">Chrome</li>
+					<li id="Linux" class="menu">Linux</li>
+					<li id="Git" class="menu">Git</li>
 				</ul>
 			</div>
 			<div class="secondMenu cssMenu">
@@ -35,11 +39,9 @@
 					<button class="menuReturnBtn">返回</button>
 				</div>
 				<ul>
-					<li class="menu2">
+					<li class="menu choosed">
 						<a href="ie6_inline-block.html">IE6中实现inline-block</a>
 					</li>
-					<li class="menu2">JS</li>
-					<li class="menu2">JS</li>
 				</ul>
 			</div>
 			<div class="secondMenu jsMenu">
@@ -47,9 +49,7 @@
 					<button class="menuReturnBtn">返回</button>
 				</div>
 				<ul>
-					<li class="menu2">JS</li>
-					<li class="menu2">JS</li>
-					<li class="menu2">JS</li>
+					<li class="menu"></li>
 				</ul>
 			</div>
 			<div class="secondMenu chromeMenu">
@@ -57,9 +57,7 @@
 					<button class="menuReturnBtn">返回</button>
 				</div>
 				<ul>
-					<li class="menu2">Chrome1</li>
-					<li class="menu2">Chrome2</li>
-					<li class="menu2">Chrome3</li>
+					<li class="menu"></li>
 				</ul>
 			</div>
 			<div class="secondMenu linuxMenu">
@@ -67,9 +65,7 @@
 					<button class="menuReturnBtn">返回</button>
 				</div>
 				<ul>
-					<li class="menu2">Linux1</li>
-					<li class="menu2">Linux2</li>
-					<li class="menu2">Linux3</li>
+					<li class="menu"></li>
 				</ul>
 			</div>
 			<div class="secondMenu gitMenu">
@@ -77,9 +73,7 @@
 					<button class="menuReturnBtn">返回</button>
 				</div>
 				<ul>
-					<li class="menu2">Git1</li>
-					<li class="menu2">Git2</li>
-					<li class="menu2">Git3</li>
+					<li class="menu"></li>
 				</ul>
 			</div>
 		</div>
