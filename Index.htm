@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>↑↑经验↑↑</title>
+	<!-- <base target="_blank"> -->
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script type="text/javascript" src="styles/jquery.js"></script>
+	<script type="text/javascript" src="styles/main.js"></script>
+	<style type="text/css">
+		body{
+			width:100%;
+			background-color:#CED7CA;
+		}
+		div.head{
+			width:90%;
+			min-width:960px;
+			max-width:1700px;
+			margin:0 auto;
+			height:100px;
+			border-bottom:1px solid brown;
+		}
+		div.head span{
+			font-size:30px;
+			height:100px;
+			line-height:100px;
+		}
+		div.content{
+			width:90%;
+			min-width:960px;
+			max-width:1700px;
+			margin:10px auto 10px;
+		}
+		div.topMenu, div.secondMenu{
+			margin:3px;
+		}
+		div.topMenu{
+			width:20%;
+			float:left; /* 删除此属性后secondMenu无法保持从顶部往下布局 */
+			border:1px solid lightgray;
+			box-shadow:0px 0px 8px rgba(0,0,0,0.1);
+		}
+		div.topMenu li{
+			text-indent:1em;
+			cursor:pointer;
+			margin:15px 0;
+			font-size:20px;
+		}
+		div.topMenu li:hover{
+			color:#009ACD;
+			/* 该属性会导致IE8下高度变大 */
+			/* font-weight:bold; */
+		}
+		div.secondMenu{
+			width:60%;
+			float:left;
+			position:relative;
+			top:0px;
+			left:0px;
+		}
+		div.secondMenu ul{
+			margin-left:10px;
+			margin-top:20px;
+		}
+		div.secondMenu li{
+			color:gray;
+			list-style:none;
+		}
+		div.secondMenu li span{
+			color:black;
+			margin-left:2em;
+			cursor:pointer;
+		}
+		div.secondMenu li span:hover{
+			color:#009ACD;
+		}
+		div.secondMenuDiv{
+			width:100%;
+			display:none;
+			box-shadow:0px 0px 8px rgba(0,0,0,0.1);
+			position:absolute;
+			left:0;
+			top:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<span>非宁静无以致远</span>
+	</div>
+	<div class="content">
+		<div class="topMenu">
+			<ul>
+				<li id="ipc">IPC相关</li>
+				<li id="ubuntu">UBUNTU</li>
+				<li id="chrome">CHROME</li>
+				<li id="ie">IE浏览器</li>
+				<li id="windows">windows</li>
+			</ul>
+		</div>
+		<div class="secondMenu">
+			<div id="ieMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.05.24<span><a href="ie/switchIE11.htm">Windows10下如何打开使用Internet Explorer 11 (x64)</a></span></li>
+				</ul>
+			</div>
+			<div id="windowsMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.06.01<span><a href="windows/autoBrowser.htm">Windows10开机自动打开默认浏览器</a></span></li>
+				</ul>
+			</div>
+			<div id="ipcMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.05.24<span><a href="ipc/git.htm">常用GIT命令</a></span></li>
+					<li>2017.05.31<span><a href="ipc/firmwareUpgrade.htm">固件升级</a></span></li>
+					<li>2017.05.31<span><a href="ipc/mac.htm">写MAC</a></span></li>
+					<li>2017.05.31<span><a href="ipc/isFactory.htm">恢复出厂设置</a></span></li>
+					<li>2017.05.31<span><a href="ipc/uhttpd.htm">重启uhttpd</a></span></li>
+					<li>2017.05.31<span><a href="ipc/deviceInfo.htm">获取设备信息</a></span></li>
+					<li>2017.05.31<span><a href="ipc/config.htm">保证tftp进设备的配置文件重启有效</a></span></li>
+					<li>2017.05.31<span><a href="ipc/cloudConfig.htm">搭建云服务拓扑</a></span></li>
+				</ul>
+			</div>
+			<div id="ubuntuMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.05.31<span><a href="ubuntu/openTerminalHere.htm">ubuntu添加右键 -> open terminal here</a></span></li>
+					<li>2017.05.31<span><a href="ubuntu/netInfo.htm">查询网络信息</a></span></li>
+					<li>2017.05.31<span><a href="ubuntu/vim.htm">vim配置</a></span></li>
+				</ul>
+			</div>
+			<div id="chromeMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.05.31<span><a href="chrome/supportFlash.htm">解决Chrome浏览器提示“Adobe flash player不是最新版本”</a></span></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			if (sessionStorage && sessionStorage.menuId != undefined && sessionStorage.menuId != "ieMenu"){
+				$(id(sessionStorage.menuId)).fadeIn();
+			}
+			else{
+				$(id("ieMenu")).fadeIn();
+			}
+
+			/* 用于保存当前点击链接时所在的div */
+			sessionStorage && sessionStorage.setItem("menuId", "ieMenu");
+			$("div.topMenu li").click(function(){
+				$("div.topMenu li").each(function(){
+					$(id($(this).attr("id") + "Menu")).fadeOut();
+				});
+				$(id($(this).attr("id") + "Menu")).fadeIn();
+				sessionStorage && sessionStorage.setItem("menuId", $(this).attr("id") + "Menu");
+			});
+		}
+	</script>
+</body>
+</html>

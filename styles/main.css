@@ -1,0 +1,94 @@
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	font-family:"微软雅黑","宋体",Arial;
+	font-size:16px;
+}
+a{
+	text-decoration:none;
+}
+a:link{
+	color:black;
+}
+a:visited{
+	color:black
+}
+a:hover{
+	color:#009ACD;
+	cursor:pointer;
+}
+
+.showBlock{
+	display:block !important;
+}
+li{
+	list-style:none;
+	padding:5px 0 10px;
+}
+li.listStyle{
+	list-style:disc;
+	margin-left:20px;
+}
+body{
+	width:100%;
+	background-color:#E6E6E6;
+}
+#page{
+	width:960px;
+	padding:32px 20px;
+	margin:30px auto;
+	background-color:#FFFFFF;
+	box-shadow:rgba(100, 100, 100, 0.3) 0px 2px 6px;
+}
+h1{
+	font-size:28px;
+}
+h2{
+	font-size:14px;
+	font-weight:normal;
+}
+div.menu{
+	margin-top:20px;
+	border-top:1px solid #EDEDED;
+	border-bottom:1px solid #EDEDED;
+	height:40px;
+	line-height:40px;
+}
+div.menu span{
+	display:inline-block;
+	padding:0 20px 0 0;
+	font-size:14px;
+}
+div.articleHead{
+	margin:20px 0 10px;
+}
+div.articleHead p.head{
+	color:#21759B;
+	font-size:20px;
+}
+div.articleHead p.headSmall{
+	color:#21759B;
+	font-size:15px;
+	padding-left:1em;
+}
+div.articleContent{
+	border:1px solid #1C1C1C;
+	background-color:#F8F8F8;
+	padding:6px 10px;
+	border-radius:3px;
+	margin-left:1em;
+}
+div.articleContent p.head1{
+	color:blue;
+	padding-bottom:0.5em;
+}
+div.articleContent li.solutionListE{
+	color:#333333;
+	font-size:14px;
+	font-family:Consolas, "Liberation Mono", Courier, monospace;
+}
+div.articleContent li.solutionListC{
+	color:#333333;
+	font-size:14px;
+}
