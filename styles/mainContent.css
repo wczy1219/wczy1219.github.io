@@ -82,3 +82,6 @@ div.articleContent li.solutionListC pre{
 div.articleContent li a{
 	font-size:14px;
 }
+div.articleContent li img{
+	border:1px solid red;
+}

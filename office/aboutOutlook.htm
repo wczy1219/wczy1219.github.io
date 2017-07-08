@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>outlook常见问题解决</title>
+	<link rel="stylesheet" type="text/css" href="../styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../styles/mainContent.css">
+	<script type="text/javascript" src="../styles/jquery.js"></script>
+	<script type="text/javascript" src="../styles/main.js"></script>
+</head>
+<body>
+	<div id="page">
+		<div class="headPart">
+			<div class="heading">
+				<h1>Hello World</h1>
+				<h2>想想、写写、再想想、再写写</h2>
+			</div>
+			<div class="menu">
+				<span><a href="../Index.htm">首页</a></span>
+				<span><a href="">其他</a></span>
+			</div>
+		</div>
+		<div class="contentPart">
+			<div class="article">
+				<div class="articleHead">
+					<p class="headSmall">解决“Outlook 禁止访问下列具有潜在不安全因素的附件”的问题</p>
+				</div>
+				<div class="articleContent">
+					<ul>
+						<li class="solutionListC">1）如果Outlook 2013正在运行，先退出。</li>
+						<li class="solutionListC">2）win + R并输入“regedit”以打开注册表编辑器。</li>
+						<li class="solutionListC">3）定位到如下注册表项：（不同office版本中Office目录下不是15.0，请选择对应版本）</li>
+						<li class="solutionListE">HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Security</li>
+						<li class="solutionListC">4）在Security上右键依次选择新建->字符串值，键入名：Level1Remove。</li>
+						<li class="solutionListC">5）鼠标右键单击新字符串值的名称，然后单击修改，键入您希望用Outlook 2013访问的文件类型的扩展名，如“.js”，若要指定多个文件类型，请使用格式：.js;.ext;</li>
+						<li class="solutionListC">6）启动outlook2013，此时就能访问刚刚设置的格式的附件了。</li>
+					</ul>
+				</div>
+			</div>
+			<div class="linking"></div>
+		</div>
+	</div>
+</body>
+</html>

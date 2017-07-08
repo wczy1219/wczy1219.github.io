@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>新版Chrome支持flash</title>
+	<title>ubuntu vim配置</title>
 	<link rel="stylesheet" type="text/css" href="../styles/main.css">
 	<link rel="stylesheet" type="text/css" href="../styles/mainContent.css">
 	<script type="text/javascript" src="../styles/jquery.js"></script>
@@ -23,28 +23,32 @@
 		<div class="contentPart">
 			<div class="article">
 				<div class="articleHead">
-					<p class="head">解决Chrome浏览器提示“Adobe flash player不是最新版本”</p>
-				</div>
-				<div class="articleHead">
-					<p class="headSmall">1）访问以下页面：</p>
+					<p class="headSmall">1)进入个人根目录</p>
 				</div>
 				<div class="articleContent">
 					<ul>
-						<li class="solutionListE"><a>http://www.adobe.com/support/flashplayer/debug_downloads.html</a></li>
+						<li class="solutionListE">cd      或者</li>
+						<li class="solutionListE">cd /home/yourname</li>
 					</ul>
 				</div>
 
 				<div class="articleHead">
-					<p class="headSmall">2）找到下方链接并点击下载文件：</p>
+					<p class="headSmall">2)编辑bashrc文件:</p>
 				</div>
 				<div class="articleContent">
 					<ul>
-						<li class="solutionListE">Download the Flash Player content debugger for Opera and Chromium based applications – PPAPI</li>
+						<li class="solutionListE">vi .bashrc</li>
 					</ul>
 				</div>
 
 				<div class="articleHead">
-					<p class="headSmall">3）下载完成后安装并重启浏览器即可。</p>
+					<p class="headSmall">3)进入文件底部添加如下命令：<br /></p>
+					<p class="headStatement">其中n代表自定义的命令，单引号中的内容代表常规命令内容</p>
+				</div>
+				<div class="articleContent">
+					<ul>
+						<li class="solutionListE">alias n='cd /home/sth/git/luci/'</li>
+					</ul>
 				</div>
 			</div>
 			<div class="linking"></div>

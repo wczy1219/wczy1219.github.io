@@ -91,34 +91,20 @@
 	<div class="content">
 		<div class="topMenu">
 			<ul>
-				<li id="ipc">IPC相关</li>
-				<li id="ubuntu">UBUNTU</li>
-				<li id="chrome">CHROME</li>
-				<li id="ie">IE浏览器</li>
-				<li id="windows">windows</li>
+				<li id="office">Office</li>
+				<li id="ubuntu">Ubuntu</li>
+				<li id="chrome">Chrome</li>
+				<li id="windows">Windows</li>
+				<li id="editor">编辑器</li>
+				<li id="encode">编码加密</li>
+				<li id="ie">Internet Explorer</li>
 			</ul>
 		</div>
 		<div class="secondMenu">
-			<div id="ieMenu" class="secondMenuDiv">
+			<div id="officeMenu" class="secondMenuDiv">
 				<ul>
-					<li>2017.05.24<span><a href="ie/switchIE11.htm">Windows10下如何打开使用Internet Explorer 11 (x64)</a></span></li>
-				</ul>
-			</div>
-			<div id="windowsMenu" class="secondMenuDiv">
-				<ul>
-					<li>2017.06.01<span><a href="windows/autoBrowser.htm">Windows10开机自动打开默认浏览器</a></span></li>
-				</ul>
-			</div>
-			<div id="ipcMenu" class="secondMenuDiv">
-				<ul>
-					<li>2017.05.24<span><a href="ipc/git.htm">常用GIT命令</a></span></li>
-					<li>2017.05.31<span><a href="ipc/firmwareUpgrade.htm">固件升级</a></span></li>
-					<li>2017.05.31<span><a href="ipc/mac.htm">写MAC</a></span></li>
-					<li>2017.05.31<span><a href="ipc/isFactory.htm">恢复出厂设置</a></span></li>
-					<li>2017.05.31<span><a href="ipc/uhttpd.htm">重启uhttpd</a></span></li>
-					<li>2017.05.31<span><a href="ipc/deviceInfo.htm">获取设备信息</a></span></li>
-					<li>2017.05.31<span><a href="ipc/config.htm">保证tftp进设备的配置文件重启有效</a></span></li>
-					<li>2017.05.31<span><a href="ipc/cloudConfig.htm">搭建云服务拓扑</a></span></li>
+					<li>2017.07.05<span><a href="office/aboutWord.htm">word常见问题解决</a></span></li>
+					<li>2017.07.05<span><a href="office/aboutOutlook.htm">outlook常见问题解决</a></span></li>
 				</ul>
 			</div>
 			<div id="ubuntuMenu" class="secondMenuDiv">
@@ -126,11 +112,32 @@
 					<li>2017.05.31<span><a href="ubuntu/openTerminalHere.htm">ubuntu添加右键 -> open terminal here</a></span></li>
 					<li>2017.05.31<span><a href="ubuntu/netInfo.htm">查询网络信息</a></span></li>
 					<li>2017.05.31<span><a href="ubuntu/vim.htm">vim配置</a></span></li>
+					<li>2017.05.31<span><a href="ubuntu/addCommand.htm">添加自定义命令</a></span></li>
 				</ul>
 			</div>
 			<div id="chromeMenu" class="secondMenuDiv">
 				<ul>
 					<li>2017.05.31<span><a href="chrome/supportFlash.htm">解决Chrome浏览器提示“Adobe flash player不是最新版本”</a></span></li>
+				</ul>
+			</div>
+			<div id="windowsMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.06.01<span><a href="windows/autoBrowser.htm">解决Windows10开机自动打开默认浏览器</a></span></li>
+				</ul>
+			</div>
+			<div id="editorMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.07.05<span><a href="editor/notepad++.htm">notepad++常规设置</a></span></li>
+				</ul>
+			</div>
+			<div id="encodeMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.07.04<span><a href="encode/normalUnicode.htm">常见字符Unicode码</a></span></li>
+				</ul>
+			</div>
+			<div id="ieMenu" class="secondMenuDiv">
+				<ul>
+					<li>2017.05.24<span><a href="ie/switchIE11.htm">Win10下切换32位和64位IE浏览器</a></span></li>
 				</ul>
 			</div>
 		</div>
@@ -143,10 +150,10 @@
 			}
 			else{
 				$(id("ieMenu")).fadeIn();
+				/* 用于保存当前点击链接时所在的div */
+				sessionStorage && sessionStorage.setItem("menuId", "ieMenu");
 			}
 
-			/* 用于保存当前点击链接时所在的div */
-			sessionStorage && sessionStorage.setItem("menuId", "ieMenu");
 			$("div.topMenu li").click(function(){
 				$("div.topMenu li").each(function(){
 					$(id($(this).attr("id") + "Menu")).fadeOut();
